@@ -4,15 +4,13 @@ const Engineer = require('./lib/Engineer');
 const Intern = require('./lib/Intern');
 const Employee = require('./lib/Employee');
 
-
+// require your page template
 // require inquirer, path if needed, fs
 const inquirer = require('inquirer');
 const fs = require('fs');
 const createTeam = require('./src/page-template.js')
 
-// require your page template
-
-//Answers
+// empty team members array
 const newTeamMember = [];
 
 // empty team members array
@@ -23,28 +21,28 @@ const questions = async () => {
     
     {
       type: 'input',
-      message: 'Enter your Name: ',
+      message: 'Enter Name: ',
       name: 'name',
 
     },
 
     {
       type: 'input',
-      message: 'Enter your ID: ',
+      message: 'Enter ID: ',
       name: 'id',
 
     },
 
     {
       type: 'input',
-      message: 'Enter your email: ',
+      message: 'Enter email: ',
       name: 'email',
 
     },
 
     {
       type: 'list',
-      message: 'Enter your role: ',
+      message: 'Enter current role: ',
       name: 'role',
       choices: ['Manager', 'Engineer', 'Intern']
 
@@ -55,7 +53,7 @@ const questions = async () => {
 
   )
 }
-
+//Answers
 // function that wraps everything (like an init function)
 
   // function for creating a manager (call this at the bottom of your init function)
@@ -75,10 +73,16 @@ const questions = async () => {
 
 
     function buildTeam() {
+      console.log('New team member added:', newTeamMember);
+      fs.writeFileSync(
+        './dist/team.html',
+        createTeam(newTeamMember);
+        
+      )
         // fs.writeFileSync(yourPathToDistFolder, functionFromPageTemplate(teamMembers), 'utf-8');
       }
   
-  
+      questions()
   // make sure call your init function
   
   

@@ -20,9 +20,9 @@ return ` <!DOCTYPE html>
         <h1>My Team</h1>
     </header>
 
-    <main class="d-flex flex-row justify-content-center">
+    <main class="d-flex flex-wrap flex-row justify-content-center">
 
-        <div class="card" style="width: 18rem;">
+        <div class="card" style="min-width: 20rem; min-height: 21rem;">
             <div class="card-body">
               <h3 class="card-title">Milena Silveira</h3>
               <h5 class="card-text">Manager</h5>
@@ -34,44 +34,10 @@ return ` <!DOCTYPE html>
             </ul>
         </div>
 
-        <div class="card" style="width: 18rem;">
-            <div class="card-body">
-              <h3 class="card-title">Mary Smith</h3>
-              <h5 class="card-text">Engineer</h5>
-            </div>
-            
-            <ul class="list-group list-group-flush border border-gray rounded shadow bg-white">
-              <li class="list-group-item id">ID: </li>
-              <li class="list-group-item email">Email: </li>
-              <li class="list-group-item office ">GitHub: </li>
-            </ul>
-        </div>
-       
-
-        <div class="card" style="width: 18rem;">
-            <div class="card-body">
-              <h3 class="card-title">Matt White</h3>
-              <h5 class="card-text">Intern</h5>
-            </div>
-            <ul class="list-group list-group-flush border border-gray rounded shadow bg-white">
-              <li class="list-group-item id">ID: </li>
-              <li class="list-group-item email">Email: </li>
-              <li class="list-group-item office ">School: </li>
-            </ul>
-        </div>
-
-       
-    
     </main>
     
 </body>
 </html>
-
-
-
-
-
-
 `
 
 
