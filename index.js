@@ -9,11 +9,52 @@ const Employee = require('./lib/Employee');
 const inquirer = require('inquirer');
 const fs = require('fs');
 const createTeam = require('./src/page-template.js')
+
 // require your page template
 
-// empty team members array
-// empty id array
+//Answers
+const newTeamMember = [];
 
+// empty team members array
+
+// empty id array
+const questions = async () => {
+  const answers = await inquirer.prompt( [
+    
+    {
+      type: 'input',
+      message: 'Enter your Name: ',
+      name: 'name',
+
+    },
+
+    {
+      type: 'input',
+      message: 'Enter your ID: ',
+      name: 'id',
+
+    },
+
+    {
+      type: 'input',
+      message: 'Enter your email: ',
+      name: 'email',
+
+    },
+
+    {
+      type: 'list',
+      message: 'Enter your role: ',
+      name: 'role',
+      choices: ['Manager', 'Engineer', 'Intern']
+
+    },
+
+  
+  ]
+
+  )
+}
 
 // function that wraps everything (like an init function)
 
