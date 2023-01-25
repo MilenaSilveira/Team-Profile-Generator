@@ -5,8 +5,9 @@ body {
 
 header{
     min-height: 100px;
-    background-color: rgb(89, 147, 168);
-    color: white;
+    border-bottom: 8px solid white;
+    background-color: rgb(107, 154, 172);
+    color:rgb(21, 77, 93);
     font-size: xx-large;
     text-align: center;
     padding: 20px;
