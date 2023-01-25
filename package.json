@@ -1,0 +1,26 @@
+{
+  "name": "team-profile",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "tests"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MilenaSilveira/Team-Profile-Generator.git"
+  },
+  "author": "Milena Silveira",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MilenaSilveira/Team-Profile-Generator/issues"
+  },
+  "homepage": "https://github.com/MilenaSilveira/Team-Profile-Generator#readme",
+  "dependencies": {
+    "inquirer": "^8.2.4",
+    "jest": "^29.4.0"
+  }
+}
