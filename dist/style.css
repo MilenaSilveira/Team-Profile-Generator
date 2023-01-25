@@ -19,11 +19,13 @@ ul {
 
 
 .card {
-   
+    box-shadow: 10px 5px 5px gray;
+    border-radius: 20px;
     margin: 70px 50px;
     padding-bottom: 25px;
 }
 .card-body {
+    border-radius: 20px 20px 0px 00px;
     background-color: rgb(222, 157, 133);
     color: rgb(21, 77, 93);
 }
