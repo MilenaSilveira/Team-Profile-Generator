@@ -1,6 +1,6 @@
 
 module.exports = team => {
-    // console.log(team)
+    
     return ` <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -33,8 +33,9 @@ module.exports = team => {
 `
 }
 
+//Function to display card every time a new Employee is created.
 function buildCards(team) {
-    // console.log('Working')
+    
 
 
     const html = team.map((employee) => {

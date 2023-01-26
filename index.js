@@ -11,11 +11,10 @@ const Employee = require('./lib/Employee');
 const inquirer = require('inquirer');
 const fs = require('fs');
 
-
-// empty team members array
+// empty id array
 const teamArray = [];
 
-// empty id array
+// empty team members array
 const employeeInput = [
 
   {
@@ -40,16 +39,13 @@ const employeeInput = [
   },
 ];
 
-// function that wraps everything (like an init function)
+// Wrap function.
 
 const promptEmployee = () => {
   return managerEmployee()
 }
 
-// function for creating a manager (call this at the bottom of your init function)
-// inquirer prompt with the manager questions
-// in your .then - set up a variable for manager that is equal to a new instance of your Manager class passing in the responses you recieved from the user's input
-
+// Create manager.
 const managerEmployee = () => {
   var managerQuestions = [
 
@@ -94,10 +90,8 @@ const managerEmployee = () => {
       teamArray.push(manager);
       newEmployee()
     })
-
-
 }
-
+// Add separate input for each category, push into array and call next employee.
 const newEmployee = () => {
   return inquirer.prompt([
 
@@ -184,12 +178,6 @@ const internEmployee = () => {
 
     })
 }
-//call your next function
-// next function should be for creating the team
-// this should ask the user what type of employee they would like to create
-// in your .then, have a conditional or switch case that runs that employee types function based on what they choose
-// or if they select the option that says they are done adding team members, run the function that builds the team
-
 // fs.writeFileSync(yourPathToDistFolder, functionFromPageTemplate(teamMembers), 'utf-8');
 function buildTeam() {
 
@@ -201,9 +189,9 @@ function buildTeam() {
   );
 
 }
-
+//init function
 promptEmployee()
-  // make sure call your init function
+  
 
 
 
