@@ -1,4 +1,4 @@
-module.exports = myTeam {
+module.exports = templateHTML; {
 
 return ` <!DOCTYPE html>
 <html lang="en">
