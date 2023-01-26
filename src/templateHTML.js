@@ -1,6 +1,6 @@
 
-module.exports = createTeam = team => {
-    console.log(team)
+module.exports = team => {
+    // console.log(team)
     return ` <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -34,24 +34,61 @@ module.exports = createTeam = team => {
 }
 
 function buildCards(team) {
-    team.map((employee) => {
-        if (employee.getRole() = 'Manager'){
-            return `
-            <div class="card" style="min-width: 20rem; min-height: 21rem;">
-            <div class="card-body">
-              <h3 class="card-title">${getName()}</h3>
-              <h5 class="card-text">Manager</h5>
-            </div>
-            <ul class="list-group list-group-flush border border-gray rounded shadow bg-white">
-              <li class="list-group-item id">ID:${getId()}</li>
-              <li class="list-group-item email">Email:${getEmail()}</li>
-              <li class="list-group-item office ">Office:${getOffice()}</li>  
-            </ul>
-        </div>
-            
-            `
+    console.log('Working')
+
+
+    const html = team.map((employee) => {
+        console.log(employee.getRole())
+
+        var role = employee.getRole()
+
+        if (role === 'Manager') {
+             return `
+             <div class="card" style="min-width: 20rem; min-height: 21rem;">
+                <div class="card-body">
+                  <h3 class="card-title">${employee.getName()}</h3>
+                  <h5 class="card-text">Manager</h5>
+                </div>
+                <ul class="list-group list-group-flush border border-gray rounded shadow bg-white">
+                  <li class="list-group-item id">ID:${employee.getId()}</li>
+                  <li class="list-group-item email">Email:${employee.getEmail()}</li>
+                  <li class="list-group-item office ">Office:${employee.getOffice()}</li>  
+                </ul>
+            </div>`
+
         }
-        // else if 
-        
+        else if (role === 'Engineer') {
+            return `
+                <div class="card" style="min-width: 20rem; min-height: 21rem;">
+                   <div class="card-body">
+                     <h3 class="card-title">${employee.getName()}</h3>
+                     <h5 class="card-text">Manager</h5>
+                   </div>
+                   <ul class="list-group list-group-flush border border-gray rounded shadow bg-white">
+                     <li class="list-group-item id">ID:${employee.getId()}</li>
+                     <li class="list-group-item email">Email:${employee.getEmail()}</li>
+                     <li class="list-group-item office ">Office:${employee.getGithub()}</li>  
+                   </ul>
+               </div>`
+        }
+        else (role === 'Intern') {
+            return `
+                <div class="card" style="min-width: 20rem; min-height: 21rem;">
+                   <div class="card-body">
+                     <h3 class="card-title">${employee.getName()}</h3>
+                     <h5 class="card-text">Manager</h5>
+                   </div>
+                   <ul class="list-group list-group-flush border border-gray rounded shadow bg-white">
+                     <li class="list-group-item id">ID:${employee.getId()}</li>
+                     <li class="list-group-item email">Email:${employee.getEmail()}</li>
+                     <li class="list-group-item office ">Office:${employee.getSchool()}</li>  
+                   </ul>
+               </div>`
+        };
+
     })
+
+    return html.join('');
+
+
 }
