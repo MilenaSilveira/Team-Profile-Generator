@@ -1,6 +1,6 @@
-module.exports = templateHTML; {
-
-return ` <!DOCTYPE html>
+module.exports = createTeam = team => {
+    console.log(team)
+    return ` <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
