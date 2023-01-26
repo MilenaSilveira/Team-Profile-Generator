@@ -1,3 +1,4 @@
+
 module.exports = createTeam = team => {
     console.log(team)
     return ` <!DOCTYPE html>
@@ -22,24 +23,35 @@ module.exports = createTeam = team => {
 
     <main class="d-flex flex-wrap flex-row justify-content-center">
 
-        <div class="card" style="min-width: 20rem; min-height: 21rem;">
-            <div class="card-body">
-              <h3 class="card-title">Milena Silveira</h3>
-              <h5 class="card-text">Manager</h5>
-            </div>
-            <ul class="list-group list-group-flush border border-gray rounded shadow bg-white">
-              <li class="list-group-item id">ID: </li>
-              <li class="list-group-item email">Email: </li>
-              <li class="list-group-item office ">Office: </li>
-            </ul>
-        </div>
-
+    ${buildCards(team)}
+        
     </main>
     
 </body>
 </html>
+
 `
+}
 
-
-
+function buildCards(team) {
+    team.map((employee) => {
+        if (employee.getRole() = 'Manager'){
+            return `
+            <div class="card" style="min-width: 20rem; min-height: 21rem;">
+            <div class="card-body">
+              <h3 class="card-title">${getName()}</h3>
+              <h5 class="card-text">Manager</h5>
+            </div>
+            <ul class="list-group list-group-flush border border-gray rounded shadow bg-white">
+              <li class="list-group-item id">ID:${getId()}</li>
+              <li class="list-group-item email">Email:${getEmail()}</li>
+              <li class="list-group-item office ">Office:${getOffice()}</li>  
+            </ul>
+        </div>
+            
+            `
+        }
+        // else if 
+        
+    })
 }

@@ -43,15 +43,14 @@ const employeeInput = [
 // function that wraps everything (like an init function)
 
 const promptEmployee = () => {
-  return managerInput()
+  return managerEmployee()
 }
-
 
 // function for creating a manager (call this at the bottom of your init function)
 // inquirer prompt with the manager questions
 // in your .then - set up a variable for manager that is equal to a new instance of your Manager class passing in the responses you recieved from the user's input
 
-const managerInput = () => {
+const managerEmployee = () => {
   var managerQuestions = [
 
     {
@@ -128,13 +127,13 @@ const newEmployee = () => {
 const engineerEmployee = () => {
   var engineerQuestions = employeeInput
   employeeInput.push(
-    [
+    
       {
         type: 'input',
         message: 'Enter GitHub link: ',
         name: 'github',
       }
-    ])
+    )
 
   return inquirer.prompt(engineerQuestions)
 
@@ -146,6 +145,8 @@ const engineerEmployee = () => {
         engineerAnswers.email,
         engineerAnswers.github
       );
+
+      employeeInput.pop()
       // push that variable to your team members array, push the id to the id array
       teamArray.push(engineer);
       newEmployee()
@@ -157,13 +158,13 @@ const internEmployee = () => {
 
   var internQuestions = employeeInput
   employeeInput.push(
-    [
+    
       {
         type: 'input',
         message: 'Enter School name: ',
         name: 'school',
       }
-    ])
+    )
 
   return inquirer.prompt(internQuestions)
 
@@ -175,6 +176,8 @@ const internEmployee = () => {
         internAnswers.email,
         internAnswers.school
       );
+      
+      employeeInput.pop()
       // push that variable to your team members array, push the id to the id array
       teamArray.push(intern);
       newEmployee()
