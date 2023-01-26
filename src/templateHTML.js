@@ -34,7 +34,7 @@ module.exports = team => {
 }
 
 function buildCards(team) {
-    console.log('Working')
+    // console.log('Working')
 
 
     const html = team.map((employee) => {
@@ -46,13 +46,13 @@ function buildCards(team) {
              return `
              <div class="card" style="min-width: 20rem; min-height: 21rem;">
                 <div class="card-body">
-                  <h3 class="card-title">${employee.getName()}</h3>
+                  <h3 class="card-title"> ${employee.getName()}</h3>
                   <h5 class="card-text">Manager</h5>
                 </div>
                 <ul class="list-group list-group-flush border border-gray rounded shadow bg-white">
-                  <li class="list-group-item id">ID:${employee.getId()}</li>
-                  <li class="list-group-item email">Email:${employee.getEmail()}</li>
-                  <li class="list-group-item office ">Office:${employee.getOffice()}</li>  
+                  <li class="list-group-item">ID: ${employee.getId()}</li>
+                  <li class="list-group-item">Email: ${employee.getEmail()}</li>
+                  <li class="list-group-item">Office: ${employee.getOffice()}</li>  
                 </ul>
             </div>`
 
@@ -61,30 +61,30 @@ function buildCards(team) {
             return `
                 <div class="card" style="min-width: 20rem; min-height: 21rem;">
                    <div class="card-body">
-                     <h3 class="card-title">${employee.getName()}</h3>
+                     <h3 class="card-title"> ${employee.getName()}</h3>
                      <h5 class="card-text">Manager</h5>
                    </div>
                    <ul class="list-group list-group-flush border border-gray rounded shadow bg-white">
-                     <li class="list-group-item id">ID:${employee.getId()}</li>
-                     <li class="list-group-item email">Email:${employee.getEmail()}</li>
-                     <li class="list-group-item office ">Office:${employee.getGithub()}</li>  
+                     <li class="list-group-item">ID: ${employee.getId()}</li>
+                     <li class="list-group-item">Email: ${employee.getEmail()}</li>
+                     <li class="list-group-item">Office: ${employee.getGithub()}</li>  
                    </ul>
                </div>`
         }
-        else (role === 'Intern') {
+        else if (role === 'Intern') {
             return `
                 <div class="card" style="min-width: 20rem; min-height: 21rem;">
                    <div class="card-body">
-                     <h3 class="card-title">${employee.getName()}</h3>
+                     <h3 class="card-title"> ${employee.getName()}</h3>
                      <h5 class="card-text">Manager</h5>
                    </div>
                    <ul class="list-group list-group-flush border border-gray rounded shadow bg-white">
-                     <li class="list-group-item id">ID:${employee.getId()}</li>
-                     <li class="list-group-item email">Email:${employee.getEmail()}</li>
-                     <li class="list-group-item office ">Office:${employee.getSchool()}</li>  
+                     <li class="list-group-item">ID: ${employee.getId()}</li>
+                     <li class="list-group-item">Email: ${employee.getEmail()}</li>
+                     <li class="list-group-item">Office: ${employee.getSchool()}</li>  
                    </ul>
                </div>`
-        };
+        }
 
     })
 
