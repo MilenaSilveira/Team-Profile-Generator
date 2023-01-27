@@ -15,6 +15,9 @@ Name, ID, Email, Office Number, Github and School.
 The application will display a series of input requests where the user will enter desired information.
 After all the profiles have been generated, a card will be displayed in HTML for each one of them.
 
+## Screenshot
+![Team-Generator](./assets/print.jpeg)
+
 ## Testing
 
 To test the app, simply enter npm test, and a Jest test will be initiated.
