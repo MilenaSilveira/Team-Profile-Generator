@@ -48,7 +48,7 @@ function buildCards(team) {
              <div class="card" style="min-width: 20rem; min-height: 21rem;">
                 <div class="card-body">
                   <h3 class="card-title"> ${employee.getName()}</h3>
-                  <h5 class="card-text">Manager</h5>
+                  <h5 class="card-text"> ${employee.getRole()}</h5>
                 </div>
                 <ul class="list-group list-group-flush border border-gray rounded shadow bg-white">
                   <li class="list-group-item">ID: ${employee.getId()}</li>
@@ -63,12 +63,12 @@ function buildCards(team) {
                 <div class="card" style="min-width: 20rem; min-height: 21rem;">
                    <div class="card-body">
                      <h3 class="card-title"> ${employee.getName()}</h3>
-                     <h5 class="card-text">Manager</h5>
+                     <h5 class="card-text"> ${employee.getRole()}</h5>
                    </div>
                    <ul class="list-group list-group-flush border border-gray rounded shadow bg-white">
                      <li class="list-group-item">ID: ${employee.getId()}</li>
                      <li class="list-group-item">Email: ${employee.getEmail()}</li>
-                     <li class="list-group-item">Office: ${employee.getGithub()}</li>  
+                     <li class="list-group-item">GitHub: ${employee.getGithub()}</li>  
                    </ul>
                </div>`
         }
@@ -77,12 +77,12 @@ function buildCards(team) {
                 <div class="card" style="min-width: 20rem; min-height: 21rem;">
                    <div class="card-body">
                      <h3 class="card-title"> ${employee.getName()}</h3>
-                     <h5 class="card-text">Manager</h5>
+                     <h5 class="card-text"> ${employee.getRole()}</h5>
                    </div>
                    <ul class="list-group list-group-flush border border-gray rounded shadow bg-white">
                      <li class="list-group-item">ID: ${employee.getId()}</li>
                      <li class="list-group-item">Email: ${employee.getEmail()}</li>
-                     <li class="list-group-item">Office: ${employee.getSchool()}</li>  
+                     <li class="list-group-item">School: ${employee.getSchool()}</li>  
                    </ul>
                </div>`
         }
